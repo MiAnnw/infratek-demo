@@ -280,7 +280,7 @@ def render_chat():
                     
                     # Generate response
                     response = st.session_state.client.models.generate_content(
-                        model="gemini-3.0-flash",
+                        model="gemini-2.5-flash",
                         contents=content_parts,
                         config=types.GenerateContentConfig(
                             system_instruction="""Bạn là một trợ lý AI thông minh chuyên phân tích và trò chuyện về nội dung tài liệu thuộc công ty Infratek.
@@ -382,3 +382,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
