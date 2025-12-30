@@ -10,7 +10,7 @@ import time
 from datetime import datetime
 
 # Hardcoded API key for demo
-GEMINI_API_KEY = "AIzaSyBjtfQgo5liFcfwKOHvnQRamVlRnGINyEY"
+GEMINI_API_KEY = "AIzaSyCx2cgku4OEW5XbjOusaO-Uk48Ri09OWks"
 
 def initialize_session_state():
     """Initialize session state variables"""
@@ -280,7 +280,7 @@ def render_chat():
                     
                     # Generate response
                     response = st.session_state.client.models.generate_content(
-                        model="gemini-2.0-flash",
+                        model="gemini-3.0-flash",
                         contents=content_parts,
                         config=types.GenerateContentConfig(
                             system_instruction="""Bạn là một trợ lý AI thông minh chuyên phân tích và trò chuyện về nội dung tài liệu thuộc công ty Infratek.
@@ -380,4 +380,5 @@ def main():
     )
 
 if __name__ == "__main__":
+
     main()
